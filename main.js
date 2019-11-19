@@ -25,7 +25,6 @@ maxFizzBuzz = parseInt(prompt("Inserisci la lunghezza preferita pe la tua sequen
 for (var i = 0; i < maxFizzBuzz; i++) {
     //ciclo maxFizzBuzz volte, con un indice cha va da 0 a (maxFizzBuzz-1)
 
-    console.log("numero:", i + 1);
     // SCRIVO FIZZ
     if (((i + 1) % FizzDivisor) == 0) {
         // scrivo "Fizz" nella mia variabile tampone
@@ -44,17 +43,12 @@ for (var i = 0; i < maxFizzBuzz; i++) {
         FizzBuzzElement = i + 1;
     }
 
-    // console.log("FizzBuzzElement:", FizzBuzzElement);
     // copio l'elemento calcolato (Fizz, Buzz, FizzBuzz o numero) nell'array
     FizzBuzzArray[i] = FizzBuzzElement;
     // re-inizializzo la variabile prima di iniziare un nuovo ciclo
     FizzBuzzElement = "";
 
-    console.log("FizzBuzzArray[", i, "] :", FizzBuzzArray[i]);
-    console.log("");
 } //for
-
-// console.log(FizzBuzzArray);
 
 // STATISTICA - analisi occorrenze in FizzBuzzArray
 // (anzichè riscorrere di nuovo l'array, si poteva fare anche direttamente quando vado a valorizzare FizzBuzzElement,
@@ -68,10 +62,6 @@ for (var i = 0; i < FizzBuzzArray.length; i++) {
         FizzBuzzCounter++;
     }
 }
-console.log("occorenze Fizz:", FizzCounter);
-console.log("occorenze Buzz:", BuzzCounter);
-console.log("occorenze FizzBuzz:", FizzBuzzCounter);
-
 
 // -----------------------------------------------------------------------------
 // ----------------------------------- HTML ------------------------------------
