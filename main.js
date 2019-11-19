@@ -13,9 +13,14 @@ var FizzDivisor = 3;
 var BuzzDivisor = 5;
 var FizzString = "Fizz";
 var BuzzString = "Buzz";
+// statistiche
+var FizzCounter = 0;
+var BuzzCounter = 0;
+var FizzBuzzCounter = 0;
 
 
-// nel caso chiedere all'utente di quanti numeri vuole il FizzBuzz
+// customizzazione - chiedere all'utente di quanti numeri vuole il FizzBuzz
+maxFizzBuzz = parseInt(prompt("Inserisci la lunghezza preferita pe la tua sequenza FizzBuzz:"));
 
 for (var i = 0; i < maxFizzBuzz; i++) {
     //ciclo maxFizzBuzz volte, con un indice cha va da 0 a (maxFizzBuzz-1)
@@ -51,4 +56,18 @@ for (var i = 0; i < maxFizzBuzz; i++) {
 
 // console.log(FizzBuzzArray);
 
-// analisi occorrenze in FizzBuzzArray
+// STATISTICA - analisi occorrenze in FizzBuzzArray
+// (anzichè riscorrere di nuovo l'array, si poteva fare anche direttamente quando vado a valorizzare FizzBuzzElement,
+// aggiungendo un "if" per distinguere tra caso Buzz e caso FizzBuzz)
+for (var i = 0; i < FizzBuzzArray.length; i++) {
+    if (FizzBuzzArray[i] == FizzString) {
+        FizzCounter++;
+    } else if ((FizzBuzzArray[i] == BuzzString)) {
+        BuzzCounter++;
+    } else if (FizzBuzzArray[i] == (FizzString + BuzzString)) {
+        FizzBuzzCounter++;
+    }
+}
+console.log("occorenze Fizz:", FizzCounter);
+console.log("occorenze Buzz:", BuzzCounter);
+console.log("occorenze FizzBuzz:", FizzBuzzCounter);
