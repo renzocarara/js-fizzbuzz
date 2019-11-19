@@ -71,3 +71,23 @@ for (var i = 0; i < FizzBuzzArray.length; i++) {
 console.log("occorenze Fizz:", FizzCounter);
 console.log("occorenze Buzz:", BuzzCounter);
 console.log("occorenze FizzBuzz:", FizzBuzzCounter);
+
+
+// -----------------------------------------------------------------------------
+// ----------------------------------- HTML ------------------------------------
+
+// scrivo la lunghezza della sequenza
+document.getElementById("sequenceLen").innerHTML = maxFizzBuzz;
+
+// scrivo la sequenza
+for (var i = 0; i < FizzBuzzArray.length; i++) {
+    //creo gli elementi
+    node = document.createElement("p"); // creo un nuovo tag <p> per ogni elemento da visualizzare
+    node.innerHTML = (i + 1) + "&rarr;" + FizzBuzzArray[i]; // lo valorizzo con i dati dell'array
+    document.getElementById("fizzBuzzSequence").appendChild(node); // lo inserisco nel flusso sulla pagina HTML
+}
+
+// scrivo le Statistiche
+document.getElementById("fizz").innerHTML = FizzCounter;
+document.getElementById("buzz").innerHTML = BuzzCounter;
+document.getElementById("fizzBuzz").innerHTML = FizzBuzzCounter;
